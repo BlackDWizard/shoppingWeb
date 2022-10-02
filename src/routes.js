@@ -1,12 +1,12 @@
 import React from 'react';
 import { HashRouter, Route, Routes } from "react-router-dom";
-import FirstPage from "./component/FirstPage";
+import Main from "./component/main";
 
 const AppRouter = () => {
     return (
         <HashRouter>
             <Routes>
-                <Route exact path="/" element={<FirstPage />} />
+                <Route exact path="" element={<Main />} />
             </Routes>
         </HashRouter>
     );
