@@ -34592,7 +34592,7 @@ var TopBar = /*#__PURE__*/function (_React$Component) {
         className: "btn-light",
         type: "button"
       }, "Sign in"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-        className: "dropdown"
+        className: "dropdown d-inline-flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
         className: "btn btn-secondary dropdown-toggle",
         type: "button",
