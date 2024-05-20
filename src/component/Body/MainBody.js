@@ -1,7 +1,5 @@
 import React from 'react';
 import '../../style/App.css';
-import '../../style/responsive.css';
-import '../../style/style.css';
 
 export default class MainBody extends React.Component {
 
@@ -48,13 +46,13 @@ export default class MainBody extends React.Component {
                   </li>
                 </ul>
                 <div className="user_option">
-                  <a href="">
+                  <a href="#">
                     <i className="fa fa-user" aria-hidden="true"></i>
                     <span>
                       Login
                     </span>
                   </a>
-                  <a href="">
+                  <a href="#">
                     <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                   </a>
                   <form className="form-inline ">
@@ -85,7 +83,7 @@ export default class MainBody extends React.Component {
                             <p>
                               Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
                             </p>
-                            <a href="">
+                            <a href="#">
                               Contact Us
                             </a>
                           </div>
@@ -110,7 +108,7 @@ export default class MainBody extends React.Component {
                             <p>
                               Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
                             </p>
-                            <a href="">
+                            <a href="#">
                               Contact Us
                             </a>
                           </div>
@@ -135,7 +133,7 @@ export default class MainBody extends React.Component {
                             <p>
                               Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
                             </p>
-                            <a href="">
+                            <a href="#">
                               Contact Us
                             </a>
                           </div>
@@ -180,7 +178,7 @@ export default class MainBody extends React.Component {
             <div className="row">
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="box">
-                  <a href="">
+                  <a href="#">
                     <div className="img-box">
                       <img src="images/p1.png" alt="" />
                     </div>
@@ -205,7 +203,7 @@ export default class MainBody extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="box">
-                  <a href="">
+                  <a href="#">
                     <div className="img-box">
                       <img src="images/p2.png" alt="" />
                     </div>
@@ -230,7 +228,7 @@ export default class MainBody extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="box">
-                  <a href="">
+                  <a href="#">
                     <div className="img-box">
                       <img src="images/p3.png" alt="" />
                     </div>
@@ -255,7 +253,7 @@ export default class MainBody extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="box">
-                  <a href="">
+                  <a href="#">
                     <div className="img-box">
                       <img src="images/p4.png" alt="" />
                     </div>
@@ -280,7 +278,7 @@ export default class MainBody extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="box">
-                  <a href="">
+                  <a href="#">
                     <div className="img-box">
                       <img src="images/p5.png" alt="" />
                     </div>
@@ -305,7 +303,7 @@ export default class MainBody extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="box">
-                  <a href="">
+                  <a href="#">
                     <div className="img-box">
                       <img src="images/p6.png" alt="" />
                     </div>
@@ -330,7 +328,7 @@ export default class MainBody extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="box">
-                  <a href="">
+                  <a href="#">
                     <div className="img-box">
                       <img src="images/p7.png" alt="" />
                     </div>
@@ -355,7 +353,7 @@ export default class MainBody extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="box">
-                  <a href="">
+                  <a href="#">
                     <div className="img-box">
                       <img src="images/p8.png" alt="" />
                     </div>
@@ -380,7 +378,7 @@ export default class MainBody extends React.Component {
               </div>
             </div>
             <div className="btn-box">
-              <a href="">
+              <a href="#">
                 View All Products
               </a>
             </div>
@@ -545,7 +543,7 @@ export default class MainBody extends React.Component {
               <div className="col-lg-7 col-md-6 px-0">
                 <div className="map_container">
                   <div className="map-responsive">
-                    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameBorder="0" style={{ border: 0 }} allowFullScreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameBorder="0" style={{ border: "0", width: "100%", height: "100%" }} allowFullScreen></iframe>
                   </div>
                 </div>
               </div>
@@ -663,16 +661,16 @@ export default class MainBody extends React.Component {
         <section className="info_section  layout_padding2-top">
           <div className="social_container">
             <div className="social_box">
-              <a href="">
+              <a href="#">
                 <i className="fa fa-facebook" aria-hidden="true"></i>
               </a>
-              <a href="">
+              <a href="#">
                 <i className="fa fa-twitter" aria-hidden="true"></i>
               </a>
-              <a href="">
+              <a href="#">
                 <i className="fa fa-instagram" aria-hidden="true"></i>
               </a>
-              <a href="">
+              <a href="#">
                 <i className="fa fa-youtube" aria-hidden="true"></i>
               </a>
             </div>
@@ -714,15 +712,15 @@ export default class MainBody extends React.Component {
                     CONTACT US
                   </h6>
                   <div className="info_link-box">
-                    <a href="">
+                    <a href="#">
                       <i className="fa fa-map-marker" aria-hidden="true"></i>
                       <span> Gb road 123 london Uk </span>
                     </a>
-                    <a href="">
+                    <a href="#">
                       <i className="fa fa-phone" aria-hidden="true"></i>
                       <span>+01 12345678901</span>
                     </a>
-                    <a href="">
+                    <a href="#">
                       <i className="fa fa-envelope" aria-hidden="true"></i>
                       <span> demo@gmail.com</span>
                     </a>

@@ -6,7 +6,7 @@ const AppRouter = () => {
     return (
         <HashRouter>
             <Routes>
-                <Route exact path="/main" element={<Main />} />
+                <Route exact path="" element={<Main />} />
             </Routes>
         </HashRouter>
     );
