@@ -1,7 +1,7 @@
 import React from 'react';
 import TopBar from './1/TopBar'
 import NavBar from './2/NavBar'
-import Main_1 from './3/Main_1'
+import MainBody from './3/MainBody'
 
 export default class Main extends React.Component {
 
@@ -10,7 +10,7 @@ export default class Main extends React.Component {
             <div>
                 <TopBar></TopBar>
                 <NavBar></NavBar>
-                <Main_1></Main_1>
+                <MainBody></MainBody>
             </div>
         );
     }
