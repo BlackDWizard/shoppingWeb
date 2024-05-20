@@ -77,7 +77,7 @@ export default class MainBody extends React.Component {
                         <div className="col-md-7">
                           <div className="detail-box">
                             <h1>
-                              Welcome To Our <br />
+                              1Welcome To Our <br />
                               Gift Shop
                             </h1>
                             <p>
@@ -102,7 +102,7 @@ export default class MainBody extends React.Component {
                         <div className="col-md-7">
                           <div className="detail-box">
                             <h1>
-                              Welcome To Our <br />
+                              2Welcome To Our <br />
                               Gift Shop
                             </h1>
                             <p>
@@ -127,7 +127,7 @@ export default class MainBody extends React.Component {
                         <div className="col-md-7">
                           <div className="detail-box">
                             <h1>
-                              Welcome To Our <br />
+                              3Welcome To Our <br />
                               Gift Shop
                             </h1>
                             <p>
