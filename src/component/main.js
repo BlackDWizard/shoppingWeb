@@ -1,12 +1,12 @@
 import React from 'react';
-import MainBody from './Body/MainBody'
+import Index from './Index/Index'
 
 export default class Main extends React.Component {
 
     render() {
         return (
             <div>
-                <MainBody></MainBody>
+                <Index></Index>
             </div>
         );
     }

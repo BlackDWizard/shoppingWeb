@@ -1,13 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../style/App.css';
 
-export default class MainBody extends React.Component {
+export default class Index extends React.Component {
+
 
 
   render() {
     return (
       <div>
-
+        <div className="alert alert-primary" role="alert">
+          A simple primary alert—check it out!
+        </div>
         <div className="hero_area">
           {/* <!-- header section strats --> */}
           <header className="header_section">
@@ -23,26 +27,33 @@ export default class MainBody extends React.Component {
 
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav  ">
-                  <li className="nav-item active">
-                    <a className="nav-link" href="index.html">Home <span className="sr-only">(current)</span></a>
+                  <li className="nav-item ">
+                    <Link className="nav-link" to="/">
+                      Home
+                      <span className="sr-only">
+                        (current)
+                      </span>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="shop.html">
+                    <Link className="nav-link" to="/shop">
                       Shop
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="why.html">
+                    <Link className="nav-link" to="/why">
                       Why Us
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="testimonial.html">
+                    <Link className="nav-link" to="/testimonial">
                       Testimonial
-                    </a>
+                    </Link>
                   </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="contact.html">Contact Us</a>
+                  <li className="nav-item active">
+                    <Link className="nav-link" to="/contact">
+                      Contact Us
+                    </Link>
                   </li>
                 </ul>
                 <div className="user_option">
