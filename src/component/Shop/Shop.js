@@ -33,7 +33,7 @@ export default class Shop extends React.Component {
                       </span>
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item active">
                     <Link className="nav-link" to="/shop">
                       Shop
                     </Link>
@@ -48,7 +48,7 @@ export default class Shop extends React.Component {
                       Testimonial
                     </Link>
                   </li>
-                  <li className="nav-item active">
+                  <li className="nav-item">
                     <Link className="nav-link" to="/contact">
                       Contact Us
                     </Link>

@@ -43,12 +43,12 @@ export default class Testimonial extends React.Component {
                       Why Us
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item active">
                     <Link className="nav-link" to="/testimonial">
                       Testimonial
                     </Link>
                   </li>
-                  <li className="nav-item active">
+                  <li className="nav-item">
                     <Link className="nav-link" to="/contact">
                       Contact Us
                     </Link>

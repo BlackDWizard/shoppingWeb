@@ -37,7 +37,7 @@ export default class Index extends React.Component {
                       Shop
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item active">
                     <Link className="nav-link" to="/why">
                       Why Us
                     </Link>
@@ -47,7 +47,7 @@ export default class Index extends React.Component {
                       Testimonial
                     </Link>
                   </li>
-                  <li className="nav-item active">
+                  <li className="nav-item">
                     <Link className="nav-link" to="/contact">
                       Contact Us
                     </Link>

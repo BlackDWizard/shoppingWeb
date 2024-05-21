@@ -34527,9 +34527,6 @@ var Index = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-        className: "alert alert-primary",
-        role: "alert"
-      }, "A simple primary alert\u2014check it out!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "hero_area"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", {
         className: "header_section"
@@ -34554,7 +34551,7 @@ var Index = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
         className: "navbar-nav  "
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-        className: "nav-item "
+        className: "nav-item active"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         className: "nav-link",
         to: "/"
@@ -34576,7 +34573,7 @@ var Index = /*#__PURE__*/function (_React$Component) {
         className: "nav-link",
         to: "/testimonial"
       }, "Testimonial")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-        className: "nav-item active"
+        className: "nav-item "
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         className: "nav-link",
         to: "/contact"
@@ -37514,7 +37511,7 @@ var Shop = /*#__PURE__*/function (_React$Component) {
       }, "Home", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         className: "sr-only"
       }, "(current)"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-        className: "nav-item"
+        className: "nav-item active"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         className: "nav-link",
         to: "/shop"
@@ -37529,7 +37526,7 @@ var Shop = /*#__PURE__*/function (_React$Component) {
         className: "nav-link",
         to: "/testimonial"
       }, "Testimonial")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-        className: "nav-item active"
+        className: "nav-item"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         className: "nav-link",
         to: "/contact"
@@ -37852,7 +37849,7 @@ var Index = /*#__PURE__*/function (_React$Component) {
         className: "nav-link",
         to: "/shop"
       }, "Shop")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-        className: "nav-item"
+        className: "nav-item active"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         className: "nav-link",
         to: "/why"
@@ -37862,7 +37859,7 @@ var Index = /*#__PURE__*/function (_React$Component) {
         className: "nav-link",
         to: "/testimonial"
       }, "Testimonial")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-        className: "nav-item active"
+        className: "nav-item"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         className: "nav-link",
         to: "/contact"
@@ -38094,12 +38091,12 @@ var Testimonial = /*#__PURE__*/function (_React$Component) {
         className: "nav-link",
         to: "/why"
       }, "Why Us")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-        className: "nav-item"
+        className: "nav-item active"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         className: "nav-link",
         to: "/testimonial"
       }, "Testimonial")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-        className: "nav-item active"
+        className: "nav-item"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         className: "nav-link",
         to: "/contact"

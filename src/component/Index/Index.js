@@ -9,9 +9,6 @@ export default class Index extends React.Component {
   render() {
     return (
       <div>
-        <div className="alert alert-primary" role="alert">
-          A simple primary alert—check it out!
-        </div>
         <div className="hero_area">
           {/* <!-- header section strats --> */}
           <header className="header_section">
@@ -27,7 +24,7 @@ export default class Index extends React.Component {
 
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav  ">
-                  <li className="nav-item ">
+                  <li className="nav-item active">
                     <Link className="nav-link" to="/">
                       Home
                       <span className="sr-only">
@@ -50,7 +47,7 @@ export default class Index extends React.Component {
                       Testimonial
                     </Link>
                   </li>
-                  <li className="nav-item active">
+                  <li className="nav-item ">
                     <Link className="nav-link" to="/contact">
                       Contact Us
                     </Link>
