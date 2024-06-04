@@ -4,7 +4,23 @@ import '../../style/App.css';
 
 export default class Index extends React.Component {
 
+  componentDidMount() {
 
+    const socket = new WebSocket('wss://localhost:44319/Chat');
+
+    socket.onmessage = function (event) {
+      const messages = document.getElementById("messages");
+      messages.innerHTML += `<p>${event.data}</p>`;
+    };
+
+    document.getElementById("chatbox").addEventListener("keyup", function (event) {
+      if (event.key === "Enter") {
+        socket.send(event.target.value);
+        event.target.value = "";
+      }
+    });
+
+  }
 
   render() {
     return (
@@ -173,6 +189,10 @@ export default class Index extends React.Component {
           {/* <!-- end slider section --> */}
         </div>
         {/* <!-- end hero area-- > */}
+
+
+        <div id="messages"></div>
+        <input id="chatbox" />
 
         {/* < !--shop section-- > */}
 
