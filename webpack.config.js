@@ -3,6 +3,15 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
+const isProd = process.env.NODE_ENV === 'production';
+const dotenv = require('dotenv');
+const env = dotenv.config().parsed;
+
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
+
 module.exports = {
   mode: 'production',
   entry: './src/index.jsx',
@@ -10,7 +19,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.[contenthash].js',
     clean: true,
-    publicPath: '/',
+    publicPath: isProd ? '/shoppingWeb/' : '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -44,6 +53,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       process: 'process/browser',
     }),
+    new webpack.DefinePlugin(envKeys),
     new HtmlWebpackPlugin({
       minify: false,
     }),

@@ -6,9 +6,11 @@ import ProductDetail from "./pages/ProductDetail";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 
+const basename = process.env.NODE_ENV === 'production' ? '/shoppingWeb' : '/';
+
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

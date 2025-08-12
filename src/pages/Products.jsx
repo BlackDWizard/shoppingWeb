@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { supabase } from './supabaseClient';
+import { supabase } from '../DB/supaBaseClient';
 
 const categories = ['全部', '手機', '筆電', '周邊', '家電', '穿戴裝置'];
 const brands = ['全部', 'Apple', 'Logitech', 'Dyson', 'Samsung', 'Dell', 'Fitbit', 'Google', 'Lenovo'];
 const PAGE_SIZE = 9;
 
-// 模擬 API 請求（新增篩選參數）
 function fetchProducts({ category, brand, minPrice, maxPrice, searchText, page }) {
 
     return new Promise(resolve => {
@@ -174,12 +173,12 @@ export default function ProductPage() {
 const styles = {
     container: {
         display: 'flex',
-        width: '100%', // 改成全寬
-        maxWidth: 'none', // 或移除 maxWidth
+        width: '100%',
+        maxWidth: 'none',
         margin: '20px auto',
         padding: '0 10px',
         gap: '20px',
-        flexWrap: 'nowrap', // 避免換行
+        flexWrap: 'nowrap',
     },
     sidebar: {
         flexBasis: '200px',
