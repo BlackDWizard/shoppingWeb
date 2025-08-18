@@ -7,6 +7,21 @@ const PAGE_SIZE = 9;
 
 function fetchProducts({ category, brand, minPrice, maxPrice, searchText, page }) {
 
+    const allProducts = [
+        { id: 1, name: 'iPhone 14', category: '手機', price: 32000, image: 'https://picsum.photos/id/1011/200/200' },
+        { id: 2, name: 'MacBook Pro', category: '筆電', price: 65000, image: 'https://picsum.photos/id/1005/200/200' },
+        { id: 3, name: '無線滑鼠', category: '周邊', price: 800, image: 'https://picsum.photos/id/1015/200/200' },
+        { id: 4, name: '空氣清淨機', category: '家電', price: 12000, image: 'https://picsum.photos/id/1016/200/200' },
+        { id: 5, name: 'Apple Watch', category: '穿戴裝置', price: 15000, image: 'https://picsum.photos/id/1019/200/200' },
+        { id: 6, name: 'Samsung Galaxy', category: '手機', price: 28000, image: 'https://picsum.photos/id/1020/200/200' },
+        { id: 7, name: 'Dell XPS', category: '筆電', price: 55000, image: 'https://picsum.photos/id/1025/200/200' },
+        { id: 8, name: '鍵盤', category: '周邊', price: 1500, image: 'https://picsum.photos/id/1027/200/200' },
+        { id: 9, name: '吸塵器', category: '家電', price: 8500, image: 'https://picsum.photos/id/1031/200/200' },
+        { id: 10, name: 'Fitbit', category: '穿戴裝置', price: 6000, image: 'https://picsum.photos/id/1033/200/200' },
+        { id: 11, name: 'Pixel 7', category: '手機', price: 25000, image: 'https://picsum.photos/id/1035/200/200' },
+        { id: 12, name: 'Lenovo ThinkPad', category: '筆電', price: 45000, image: 'https://picsum.photos/id/1036/200/200' },
+      ];
+    
     return new Promise(resolve => {
         setTimeout(() => {
             let filtered = allProducts;

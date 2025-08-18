@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -13,7 +14,7 @@ const envKeys = Object.keys(env).reduce((prev, next) => {
 }, {});
 
 module.exports = {
-  mode: 'production',
+  mode: isProd ? 'production' : 'development',
   entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -62,5 +63,19 @@ module.exports = {
         { from: 'web.config', to: '.' }
       ],
     }),
+    {
+      apply: (compiler) => {
+        compiler.hooks.done.tap('CopyIndexAfterBuild', () => {
+          const src = path.resolve(__dirname, 'dist/index.html');
+          const dest = path.resolve(__dirname, 'index.html');
+          fs.copyFileSync(src, dest);
+
+          // 把 <script src="..."> 前面加上 dist/
+          let html = fs.readFileSync(dest, 'utf8');
+          html = html.replace(/<script defer src="(.*?)"><\/script>/g, '<script defer src="dist$1"></script>');
+          fs.writeFileSync(dest, html, 'utf8');
+        });
+      },
+    },
   ]
 };
