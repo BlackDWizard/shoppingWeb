@@ -73,20 +73,6 @@ module.exports = {
       patterns: [
         { from: '_redirects', to: '.' }
       ],
-    }),
-    {
-      apply: (compiler) => {
-        compiler.hooks.done.tap('CopyIndexAfterBuild', () => {
-          const src = path.resolve(__dirname, 'dist/index.html');
-          const dest = path.resolve(__dirname, 'index.html');
-          fs.copyFileSync(src, dest);
-
-          // 把 <script src="..."> 前面加上 dist/
-          let html = fs.readFileSync(dest, 'utf8');
-          html = html.replace(/<script defer src="(.*?)"><\/script>/g, '<script defer src="dist$1"></script>');
-          fs.writeFileSync(dest, html, 'utf8');
-        });
-      },
-    },
+    })
   ]
 };
