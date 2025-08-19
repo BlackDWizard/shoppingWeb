@@ -47,10 +47,6 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
-        generator: {
-          filename: (isProd ? 'dist/' : '') + '[name][hash][ext]',
-          publicPath: isProd ? '/shoppingWeb/' : ''
-        }
       },
     ],
   },
@@ -71,14 +67,13 @@ module.exports = {
       apply: (compiler) => {
         compiler.hooks.done.tap('CopyIndexAfterBuild', () => {
           const src = path.resolve(__dirname, 'dist/index.html');
-          const indexHtml = path.resolve(__dirname, 'index.html');
-          fs.copyFileSync(src, indexHtml);
+          const dest = path.resolve(__dirname, 'index.html');
+          fs.copyFileSync(src, dest);
 
           // 把 <script src="..."> 前面加上 dist/
-          let html = fs.readFileSync(indexHtml, 'utf8');
-          html = html.replace(/<script defer src="(.*?)"><\/script>/g, '<script defer src="shoppingWeb/dist$1"></script>');
-          fs.writeFileSync(src, html, 'utf8');
-          fs.writeFileSync(indexHtml, html, 'utf8');
+          let html = fs.readFileSync(dest, 'utf8');
+          html = html.replace(/<script defer src="(.*?)"><\/script>/g, '<script defer src="dist$1"></script>');
+          fs.writeFileSync(dest, html, 'utf8');
         });
       },
     },
