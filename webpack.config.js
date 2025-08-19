@@ -63,6 +63,11 @@ module.exports = {
     //     { from: 'web.config', to: '.' }
     //   ],
     // }),
+    new CopyPlugin({
+      patterns: [
+        { from: '_redirects', to: '.' }
+      ],
+    }),
     {
       apply: (compiler) => {
         compiler.hooks.done.tap('CopyIndexAfterBuild', () => {
