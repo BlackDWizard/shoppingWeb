@@ -3,16 +3,22 @@ const webpack = require('webpack');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const dotenv = require('dotenv');
 
 const isProd = process.env.NODE_ENV === 'production';
-const dotenv = require('dotenv');
-const env = dotenv.config().parsed;
 
-const envKeys = Object.keys(env).reduce((prev, next) => {
-  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+const envFile = dotenv.config().parsed || {};
+
+const envKeys = Object.keys(envFile).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(envFile[next]);
   return prev;
 }, {});
 
+for (const key in process.env) {
+  if (key.startsWith('REACT_APP_')) {
+    envKeys[`process.env.${key}`] = JSON.stringify(process.env[key]);
+  }
+}
 module.exports = {
   mode: isProd ? 'production' : 'development',
   entry: './src/index.jsx',
