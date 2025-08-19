@@ -13,7 +13,7 @@ export default function Home() {
                         <div className="card-body">
                             <h5 className="card-title">推薦商品 1</h5>
                             <p className="card-text">簡短介紹商品特色</p>
-                            <Link href="/product/1" className="btn btn-primary">查看詳情</Link>
+                            <Link to="/product/1" className="btn btn-primary">查看詳情</Link>
                         </div>
                     </div>
                 </div>
