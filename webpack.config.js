@@ -58,11 +58,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       minify: false,
     }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'web.config', to: '.' }
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     { from: 'web.config', to: '.' }
+    //   ],
+    // }),
     {
       apply: (compiler) => {
         compiler.hooks.done.tap('CopyIndexAfterBuild', () => {

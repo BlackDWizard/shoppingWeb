@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import p1 from '../assets/images/p1.png';
 
 export default function Home() {
     return (
@@ -9,7 +8,7 @@ export default function Home() {
             <div className="row">
                 <div className="col-md-4">
                     <div className="card">
-                        <img src={p1} className="card-img-top" alt="商品1" />
+                        <img src="../assets/images/p1.png" className="card-img-top" alt="商品1" />
                         <div className="card-body">
                             <h5 className="card-title">推薦商品 1</h5>
                             <p className="card-text">簡短介紹商品特色</p>
