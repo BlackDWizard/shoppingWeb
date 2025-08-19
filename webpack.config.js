@@ -48,7 +48,8 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
-          publicPath: isProd ? 'dist/' : '' // 這會加在 import 的 src 前
+          filename: (isProd ? 'dist/' : '') + '[name][hash][ext]',
+          publicPath: isProd ? 'dist/' : ''
         }
       },
     ],
