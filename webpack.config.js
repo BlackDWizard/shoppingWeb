@@ -67,13 +67,19 @@ module.exports = {
       apply: (compiler) => {
         compiler.hooks.done.tap('CopyIndexAfterBuild', () => {
           const src = path.resolve(__dirname, 'dist/index.html');
-          const dest = path.resolve(__dirname, 'index.html');
-          fs.copyFileSync(src, dest);
+          const indexHtml = path.resolve(__dirname, 'index.html');
+          const notFoundHtml = path.resolve(__dirname, '404.html');
+          fs.copyFileSync(src, indexHtml);
+          fs.copyFileSync(src, notFoundHtml);
 
           // 把 <script src="..."> 前面加上 dist/
-          let html = fs.readFileSync(dest, 'utf8');
+          let html = fs.readFileSync(indexHtml, 'utf8');
           html = html.replace(/<script defer src="(.*?)"><\/script>/g, '<script defer src="dist$1"></script>');
-          fs.writeFileSync(dest, html, 'utf8');
+          fs.writeFileSync(indexHtml, html, 'utf8');
+          
+          html = fs.readFileSync(notFoundHtml, 'utf8');
+          html = html.replace(/<script defer src="(.*?)"><\/script>/g, '<script defer src="dist$1"></script>');
+          fs.writeFileSync(notFoundHtml, html, 'utf8');
         });
       },
     },
