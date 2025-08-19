@@ -48,7 +48,8 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: (isProd ? 'dist/' : '') + '[name][hash][ext]'
+          filename: (isProd ? 'dist/' : '') + '[name][hash][ext]',
+          publicPath: isProd ? '/shoppingWeb/' : ''
         }
       },
     ],
