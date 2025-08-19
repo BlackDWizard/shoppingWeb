@@ -20,7 +20,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.[contenthash].js',
     clean: true,
-    publicPath: isProd ? '/shoppingWeb/' : '/',
+    publicPath: isProd ? '/shoppingWeb/dist/' : '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
