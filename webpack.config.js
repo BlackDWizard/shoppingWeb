@@ -20,7 +20,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.[contenthash].js',
     clean: true,
-    publicPath: isProd ? '/shoppingWeb/dist/' : '/',
+    publicPath: isProd ? '/shoppingWeb/' : '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -76,7 +76,8 @@ module.exports = {
 
           // 把 <script src="..."> 前面加上 dist/
           let html = fs.readFileSync(indexHtml, 'utf8');
-          html = html.replace(/<script defer src="(.*?)"><\/script>/g, '<script defer src="dist$1"></script>');
+          html = html.replace(/<script defer src="(.*?)"><\/script>/g, '<script defer src="shoppingWeb/dist$1"></script>');
+          fs.writeFileSync(src, html, 'utf8');
           fs.writeFileSync(indexHtml, html, 'utf8');
         });
       },
